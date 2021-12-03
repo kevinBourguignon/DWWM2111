@@ -14,6 +14,7 @@ namespace Exos1_1_3
             float average;
 
             Console.WriteLine("Enter numbers : ");
+
             
            
             
