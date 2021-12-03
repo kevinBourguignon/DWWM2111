@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exos_2_1_2", "Exos_2_1_2\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exos_2_2_1", "Exos_2_2_1\Exos_2_2_1.csproj", "{0C23617A-F691-4EB3-9534-0F3CB3A8615A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exos_2_2_1bis", "Exos_2_2_1bis\Exos_2_2_1bis.csproj", "{D7D8B100-17A4-4ACE-9EC9-89B97E1370AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exos_2_2_2", "Exos_2_2_2\Exos_2_2_2.csproj", "{DCAE632E-C659-4502-99EF-6DBF95C97900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,10 +113,10 @@ Global
 		{0C23617A-F691-4EB3-9534-0F3CB3A8615A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C23617A-F691-4EB3-9534-0F3CB3A8615A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C23617A-F691-4EB3-9534-0F3CB3A8615A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7D8B100-17A4-4ACE-9EC9-89B97E1370AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7D8B100-17A4-4ACE-9EC9-89B97E1370AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7D8B100-17A4-4ACE-9EC9-89B97E1370AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7D8B100-17A4-4ACE-9EC9-89B97E1370AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAE632E-C659-4502-99EF-6DBF95C97900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAE632E-C659-4502-99EF-6DBF95C97900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAE632E-C659-4502-99EF-6DBF95C97900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAE632E-C659-4502-99EF-6DBF95C97900}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
