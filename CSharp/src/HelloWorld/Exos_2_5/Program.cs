@@ -8,32 +8,55 @@ namespace Exos_2_5
         {
             int N;
             int Nbre;
-            int max = 2;
-            int min = 1;
+            int joueur = 0;
+            int ordi = 0;
 
             Random random = new Random();
-            random.Next(min, max);
-            N = random.Next(min, max);
 
-            Console.WriteLine("Entrer le nombre entre 0 et 2 ");
-            Nbre = int.Parse(Console.ReadLine());
+            do
+            {
+               
+
+                N = random.Next(0, 3);
+
+                Console.WriteLine("Entrer le nombre entre 0 et 2 ");
+                Nbre = int.Parse(Console.ReadLine());
 
 
-            do {
-                if (max == 2)
+
+                if (Math.Abs(Nbre - N) == 2)
                 {
-                    Console.WriteLine("Vous gagnez un point ");
-
+                    Console.WriteLine(+Nbre + " Et " + N + " le joueur qui a proposer le plus grand nombre gagne un point");
+                    if(Nbre > N)
+                    {
+                        joueur++;
+                    }
+                    else
+                    {
+                        ordi++;
+                    }
                 }
-                else if (min == 1)
+                if (Math.Abs(Nbre - N) == 1)
                 {
-                    Console.WriteLine("Vous gagnez un point ");
+                    Console.WriteLine(+Nbre + " Et " + N + " le joueur qui a proposé le plus petit nombre gagne un point");
+                    if(Nbre > N)
+                    {
+                        ordi++;
+                    }
+                    else
+                    {
+                        joueur++;
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Vous ne gagnez rien ");
+
+                    Console.WriteLine(+Nbre + " Et " + N + " aucun point n'est marqué ");
                 }
-            } while (max > min);
+
+                Console.WriteLine($"le joueur à {joueur} et l'ordinateur à {ordi} ");
+
+            } while (!(joueur == 10 || ordi == 10));
 
 
         }
