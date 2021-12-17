@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExosRecursive_2_5bis", "Exo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExosRecursive_2_6", "ExosRecursive_2_6\ExosRecursive_2_6.csproj", "{AEE322BD-BFC9-4E21-812E-3BD2249E6270}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExosRecursive_2_7", "ExosRecursive_2_7\ExosRecursive_2_7.csproj", "{3F518EF9-9A85-45D5-B9D5-547D1368F342}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{AEE322BD-BFC9-4E21-812E-3BD2249E6270}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE322BD-BFC9-4E21-812E-3BD2249E6270}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE322BD-BFC9-4E21-812E-3BD2249E6270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F518EF9-9A85-45D5-B9D5-547D1368F342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F518EF9-9A85-45D5-B9D5-547D1368F342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F518EF9-9A85-45D5-B9D5-547D1368F342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F518EF9-9A85-45D5-B9D5-547D1368F342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
