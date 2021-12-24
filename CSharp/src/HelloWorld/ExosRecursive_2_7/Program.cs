@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExosRecursive_2_7
+namespace Exos_3_7
 {
     class Program
     {
@@ -54,9 +54,9 @@ namespace ExosRecursive_2_7
                 }
                 else
                 {
-                    Console.WriteLine(-1);
+                    Console.WriteLine(0);
                 }
-                Console.WriteLine($" {debut} le prénom que se trouve a cet endroit est {val}");
+                Console.WriteLine($" {debut} le prénom qui se trouve a cet endroit est {val}");
             }
         }
         
