@@ -7,36 +7,34 @@ namespace Materiel_école
         private int volume;
         private bool estOuvert;
 
-        public abstract bool Ouvert
+       
+        public Trousse()
         {
-            
+            Volume = volume;
+            EstOuvert = estOuvert;
         }
 
-        public abstract void Trousse
+        public  void Ouvrir()
         {
-            
+            this.estOuvert = true;
         }
 
-        public abstract void Ouvrir
+        public  void Fermer()
         {
-            
-        }
+            this.estOuvert = false;
 
-        public abstract void Fermer
-        {
-            
         }
 
         public  int Volume
         {
             get { return volume; }
-            set { volume = value; }
+           private set { volume = value; }
         }
 
         public  bool EstOuvert
         {
             get { return estOuvert; }
-            set { estOuvert = true; }
+           private set { estOuvert = true; }
         }
     }
 }

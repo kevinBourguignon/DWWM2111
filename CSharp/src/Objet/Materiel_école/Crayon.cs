@@ -12,27 +12,41 @@ namespace Materiel_école
 
         public void Tailler()
         {
-
+            if(CapaciteEcriture > 3)
+            {
+                CapaciteEcriture -= 3;
+                pointeDeMineATailler = true;
+            }
+            else
+            {
+                CapaciteEcriture = -1;
+            }
         }
 
-        public new void Ecrire()
-        {
-
-        }
+        
 
         public  bool PointeDeMineATailler
         {
-            get { return pointeDeMineATailler = true; }
+            get { return pointeDeMineATailler; }
+         private set { pointeDeMineATailler = value; }
         }
 
-        public new void affaires()
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        public new void utiliser()
+        public override void Utiliser()
         {
-            throw new NotImplementedException();
+            int rndMinePlusTaillee = new Random().Next(0, 3);
+
+            if (!this.PointeDeMineATailler)
+            {
+                this.Tailler();
+            }
+            base.Ecrire();
+
+            if (rndMinePlusTaillee == 0)
+            {
+                this.PointeDeMineATailler = false;
+            }
         }
     }
 }

@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geométrie", "Objet\Geométrie.csproj", "{3014C8A4-E2A2-497D-8327-1B666777D04B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Materiel_école", "Materiel_école\Materiel_école.csproj", "{AE28A40B-BC7C-4500-8D22-1D0D00FD29D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Materiel_école", "Materiel_école\Materiel_école.csproj", "{AE28A40B-BC7C-4500-8D22-1D0D00FD29D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoupéesRusses", "PoupéesRusses\PoupéesRusses.csproj", "{7978FC0A-0D3D-4C91-A765-FCD51CCE1F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montres", "Montres\Montres.csproj", "{EB90B2B3-A8F3-42A6-823C-D973F3A8EBE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SujetExamen", "SujetExamen\SujetExamen.csproj", "{57B30D44-EC48-459C-9D55-43E5EEB5422A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbres", "Arbres\Arbres.csproj", "{6F0970D4-AD8A-4222-89E5-218B9BB34B21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{AE28A40B-BC7C-4500-8D22-1D0D00FD29D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE28A40B-BC7C-4500-8D22-1D0D00FD29D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE28A40B-BC7C-4500-8D22-1D0D00FD29D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7978FC0A-0D3D-4C91-A765-FCD51CCE1F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7978FC0A-0D3D-4C91-A765-FCD51CCE1F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7978FC0A-0D3D-4C91-A765-FCD51CCE1F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7978FC0A-0D3D-4C91-A765-FCD51CCE1F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB90B2B3-A8F3-42A6-823C-D973F3A8EBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB90B2B3-A8F3-42A6-823C-D973F3A8EBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB90B2B3-A8F3-42A6-823C-D973F3A8EBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB90B2B3-A8F3-42A6-823C-D973F3A8EBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B30D44-EC48-459C-9D55-43E5EEB5422A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B30D44-EC48-459C-9D55-43E5EEB5422A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B30D44-EC48-459C-9D55-43E5EEB5422A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B30D44-EC48-459C-9D55-43E5EEB5422A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0970D4-AD8A-4222-89E5-218B9BB34B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0970D4-AD8A-4222-89E5-218B9BB34B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0970D4-AD8A-4222-89E5-218B9BB34B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0970D4-AD8A-4222-89E5-218B9BB34B21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

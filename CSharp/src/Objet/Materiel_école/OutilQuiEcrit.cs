@@ -14,17 +14,25 @@ namespace Materiel_école
         public string Couleur
         {
             get { return couleur; }
-            set { couleur = value; }
+           protected set { couleur = value; }
         }
 
         public int CapaciteEcriture
         {
             get { return capaciteEcriture; }
+            protected set { capaciteEcriture = value; }
         }
 
-        public  void Ecrire()
+        protected  void Ecrire()
         {
-
+            if (this.CapaciteEcriture > 0)
+            {
+                Console.WriteLine($"J'écris du texte de couleur {couleur}");
+            }
+            else
+            {
+                Console.WriteLine("!!! Capacité d'écriture épuisée !!!");
+            }
         }
 
         public void utiliser()
@@ -32,9 +40,6 @@ namespace Materiel_école
             throw new NotImplementedException();
         }
 
-        public void affaires()
-        {
-
-        }
+        
     }
 }
