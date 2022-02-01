@@ -49,7 +49,7 @@ namespace PoupéesRusses
 
         public void Ouvrir()
         {
-            // this.Dans == null test si la poupée est dans aucun autre poupée
+            
             if (!this.EstOuverte && this.Dans == null)
             {
                 this.EstOuverte = true;
