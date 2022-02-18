@@ -1,0 +1,38 @@
+--CREATE DATABASE CDI;
+GO
+
+USE CDI;
+
+
+
+CREATE TABLE DEPT(
+	deptno INT NOT NULL IDENTITY,
+	dname VARCHAR (50) NOT NULL,
+	loc VARCHAR (100) NOT NULL,
+	CONSTRAINT PK_DEPT_deptno PRIMARY KEY (deptno));
+
+
+
+CREATE TABLE EMP(
+	empno INT NOT NULL IDENTITY,
+	ename VARCHAR (50) NOT NULL,
+	job VARCHAR (50) NOT NULL,
+	mgr INT NOT NULL,
+	hiredate DATE NOT NULL,
+	sal INT NOT NULL,
+	comm INT NOT NULL,
+	deptno INT NOT NULL,
+	CONSTRAINT PK_EMP_empno PRIMARY KEY (empno),
+	CONSTRAINT FK_EMP_deptno FOREIGN KEY (deptno) REFERENCES DEPT (deptno),
+	CONSTRAINT FK_EMP_mgr FOREIGN KEY (mgr) REFERENCES EMP (empno)
+	);
+
+GO
+
+INSERT INTO DEPT (deptno, dname, loc)
+VALUES (10, 'ACCOUNTING', 'NEW YORK'), (20, 'RESEARCH', 'DALLAS'), (30, 'SALES', 'CHICAGO'), (40, 'OPERATIONS', 'BOSTON');
+
+INSERT INTO EMP (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (
+	
+
