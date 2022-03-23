@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DWWM2111>
+    <Formateur>
+        <prenom>Paul</prenom>
+        <nom>BOURGEOIS</nom>
+        <gender>Androgine</gender>
+    </Formateur>
+    <Stagiaire>
+        <prenom>Kévin</prenom>
+        <nom>BOURGUIGNON</nom>
+        <gender>male</gender>
+        <datederentrer>
+            <annee>2021</annee>
+            <mois>Novembre</mois>
+            <jour>15</jour>
+        </datederentrer>
+        <prenom>Damien</prenom>
+        <nom>SIMON-CHAUTEMPS</nom>
+        <gender>Alienne</gender>
+        <datederentrer>
+            <annee>2021</annee>
+            <mois>Novembre</mois>
+            <jour>15</jour>
+        </datederentrer>
+        <prenom>Denis</prenom>
+        <nom>ALBRECHT</nom>
+        <gender>male</gender>
+        <datederentrer>
+            <annee>2021</annee>
+            <mois>Novembre</mois>
+            <jour>15</jour>
+        </datederentrer>
+        <prenom>Sabah</prenom>
+        <nom>DEKKOUMI</nom>
+        <gender>female</gender>
+        <datederentrer>
+            <annee>2021</annee>
+            <mois>Novembre</mois>
+            <jour>15</jour>
+        </datederentrer>
+        <prenom>Océan</prenom>
+        <nom>RIBAULT</nom>
+        <gender>female</gender>
+        <datederentrer>
+            <annee>2021</annee>
+            <mois>Novembre</mois>
+            <jour>15</jour>
+        </datederentrer>
+    </Stagiaire>
+
+</DWWM2111>
