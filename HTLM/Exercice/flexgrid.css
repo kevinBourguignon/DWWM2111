@@ -1,0 +1,24 @@
+html, body{
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc333;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 4;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+

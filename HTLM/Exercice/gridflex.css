@@ -1,0 +1,92 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "nav article3 article4 article4"
+    "nav article5 article5 article6"
+    "nav article7 article8 article9"
+    "nav footer footer footer";
+    margin: 3px;
+    row-gap: 5px;
+    column-gap: 5px;
+    color: white;
+    font-size: 40px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body  header, nav, section, footer{
+    background-color: #CCCC33;
+    
+}
+
+header{
+    grid-area: header;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+
+}
+
+nav{
+    grid-area: nav;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+
+.a3{
+    grid-area: article3;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a4{
+    grid-area: article4;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a5{
+    grid-area: article5;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a6{
+    grid-area: article6;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a7{
+    grid-area: article7;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a8{
+    grid-area: article8;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.a9{
+    grid-area: article9;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+
+footer{
+    grid-area: footer;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+
+

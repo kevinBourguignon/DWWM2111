@@ -1,0 +1,85 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 35px 1fr 30px;
+    grid-template-areas: 
+    "header header Ads"
+    "nav Article Article"
+    "nav footer footer";
+    margin: 3px;
+    row-gap: 5px;
+    column-gap: 5px;
+    
+}
+
+body header, div, nav, main, footer{
+    background-color: #BBCCFF;
+   
+}
+
+header{
+    grid-area: header;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+ div >h1{
+    grid-area: Ads;
+    text-align: left;
+    margin: 0;
+    font-weight: normal;
+    font-size: large ;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+nav{
+    grid-area: nav;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+main{
+    grid-area: Article;
+    padding-left: 15px;
+}
+
+
+Article{
+    
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 80px; 
+    
+    
+    
+}
+
+section{
+    background-color: white;
+    border-radius: 2px;  
+}
+
+
+
+footer{
+    grid-area: footer;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 400px) {
+    
+
+    
+    
+}
+
+
+
+
+
+
