@@ -1,11 +1,23 @@
 html, body{
     height: 100%;
 }
+
+header, nav, section, footer{
+    background-color: #ccc333;
+    color: white;
+    font-size: xx-large;
+    padding-left: 4px;
+    padding-top: 5px;
+}
+
 .container{
     display: flex;
     flex-direction: column;
-    background-color: #ccc333;
     flex-wrap: wrap;
+    gap: 5px;
+}
+
+header{
     flex: 1;
 }
 
@@ -14,11 +26,46 @@ html, body{
     flex-direction: row;
     flex-wrap: wrap;
     flex: 4;
+    gap: 5px;
+}
+
+nav{
+    flex: 1;
 }
 
 .container2{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
+    flex: 3; 
+    gap: 5px;
 }
+
+.petit{
+    flex: 1 1 30%;
+    
+}
+
+.moyen{
+    flex: 1 1 62%;
+}
+
+footer{
+    flex: 1 1 100%;
+}
+
+@media screen and (max-width: 1084px) {
+    .container1{
+        flex-direction: column;
+    }
+.petit, .moyen{
+     flex: 1 1 45%;
+}
+   
+    
+}
+
+
+
+
 
