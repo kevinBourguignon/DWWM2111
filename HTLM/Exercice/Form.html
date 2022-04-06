@@ -7,56 +7,58 @@
     <meta name="author" content="Kévin Bourguignon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="form.css">
     <title>FORM</title>
 </head>
 <body>
     <form action="inscription.php" method="POST" enctype="multipart/form-data">
-       <fieldset><legend>Identity</legend>
+       <div class="gauche">
         <label for="Name" required="true">Name</label>
-        <input type="text" id="Name"  name="name">
         <label for="phone" required="true">Phone</label>
-        <input type="text" id="phone" name="phone">
         <label for="email" required="true">Email</label>
-        <input type="email" id="email" name="email">
-    </fieldset>
+        </div>
+
+         <input type="text" id="Name"  name="name" class="droite">
+        <input type="text" id="phone" name="phone" class="droite">
+        <input type="email" id="email" name="email" class="droite">
+    
         <fieldset>
             <legend>Which service do you require?</legend>
-            <input type="radio" id="plumbing" name="plumbing">
-            <label for="plumbing">Plumbing</label>
-            <input type="radio" id="electricity" name="plumbing">
-            <label for="electricity">Electricity</label>
-            <input type="radio" id="painting" name="plumbing">
-            <label for="painting">Painting</label>
+           <span class="rad"> <input type="radio" id="plumbing" name="plumbing">
+            <label for="plumbing">Plumbing</label></span>
+            <span class="rad"><input type="radio" id="electricity" name="plumbing">
+            <label for="electricity">Electricity</label></span>
+            <span class="rad"><input type="radio" id="painting" name="plumbing">
+            <label for="painting">Painting</label></span>
         </fieldset>
 
         <fieldset>
             <legend>Which other service do you need</legend>
-            <input type="checkbox" id="architect" name="architect">
-            <label for="architect">Architect</label>
-            <input type="checkbox" id="disinfection" name="disinfection">
-            <label for="disinfection">Disinfection</label>
-            <input type="checkbox" id="rat-extermination" name="rat-etermination">
-            <label for="rat-extermination">Rat extermination</label>
+            <span class="check"><input type="checkbox" id="architect" name="architect">
+            <label for="architect">Architect</label></span>
+            <span class="check"><input type="checkbox" id="disinfection" name="disinfection">
+            <label for="disinfection">Disinfection</label></span>
+            <span class="check"><input type="checkbox" id="rat-extermination" name="rat-etermination">
+            <label for="rat-extermination">Rat extermination</label></span>
         </fieldset>
-
-        <label for="date/time">Date/Time</label>
-        <input type="datetime-local" id="date/time" name="date/time">
-        <input type="submit" id="validation" name="validation" value="valider">
-        <label for="place">Place</label>
-
-        <select name="place" id="place">
-            <option>Select One</option>
-            <option>Main Office (Paris)</option>
-            <option>Technical center (Lille)</option>
-            <option>Logistic center (Amiens)</option>
-        </select>
-
-        
-
-
-
-
+       <div class="gauche">
+            <label for="date/time">Date/Time</label>
+            <label for="place" class="place">Place</label>
+            <label for="other" class="other">Other needs</label>
+            <label for="special" class="spe">Special Instructions</label>
+        </div> 
+             
+        <input type="datetime-local" id="date/time" name="date/time" class="droite">
+            <select name="place" id="place" class="droite">
+                <option>Select One</option>
+                <option>Main Office (Paris)</option>
+                <option>Technical center (Lille)</option>
+                <option>Logistic center (Amiens)</option>
+            </select>
+        <input type="text" id="other" name="other" class="droite">
+        <textarea name="special" id="special" cols="30" rows="10" class="droite"></textarea>
+        <button type="submit" id="validation" name="validation">submit</button>
+  
     </form>
 
     

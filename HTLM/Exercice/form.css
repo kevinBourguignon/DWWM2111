@@ -1,0 +1,86 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 90%;
+    
+}
+
+form{
+    background-color: #33AAFF;
+    padding: 10px;
+    width: 40%;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset{
+    clear: both;
+    margin-bottom: 10px;
+    border: 1px inset #333333;   
+    font-size: small;
+}
+
+.gauche{
+    display: inline;
+    float: left;
+}
+
+legend{
+    font-weight: bold;
+    padding: 5px;
+}
+
+label{
+    margin: 6px;
+    margin-bottom: 5px;
+    display: block;
+
+}
+
+#place{
+    margin: 1px;
+}
+
+.check{
+    display: inline;
+    float: left;
+}
+
+.rad{
+    display: inline;
+    float: left;
+  
+}
+
+.spe{
+    height: 50px;
+    vertical-align: bottom;
+    
+}
+textarea{
+    margin: 2px;
+    height: 50px;
+}
+
+.droite{
+    float: right;
+    width: 50%;
+    margin-bottom: 5px;
+    
+}
+
+button{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(68, 67, 67);
+    color: white;
+    border: 1px solid #CCC;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+
+
+
