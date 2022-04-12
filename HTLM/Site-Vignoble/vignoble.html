@@ -7,7 +7,8 @@
     <meta name="author" content="Kévin Bourguignon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=chrome">
-    <link rel="stylesheet" href="vigne.css">
+    <link rel="stylesheet" href="vigne.css" type="text/css">
+  
     <title>Vignoble</title>
 </head>
 
@@ -16,7 +17,7 @@
 
     <header>
        
-            <img src="/Site-Vignoble/images/logo.png" title="logo" alt="logo">
+            <img src="images/logo.png" title="logo" alt="logo">
         
 
         <nav id="navigation">
@@ -79,16 +80,19 @@
     <main class="container">
         <section >
             <figure class="raisin">
-                <img class="vin" src="images/raisin.jpg">
+                <h1>Présentation du domaine</h1>
+                <img src="images/raisin.jpg">
                 <figcaption>Sequi nescique quisququi dolertolorem</figcaption>
             </figure>
         </section>
         <hr class="alignement">
-        <section>
+        <section id="test">
             
-            <article class="LaCave">
-                <header>
-                    <h1>La Cave <img src="/Site-Vignoble/images/icon-1.png"></h1>
+            <article class="LaCave" id="bouteille">
+                <header> 
+                    <img class="droite" src="images/icon-1.png">
+                    <h2>La Cave </h2>
+                   
                 </header>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -96,24 +100,29 @@
                     At, atque iste iure quos culpa nostrum minima quas natus
                     qui reprehenderit dolorem, tempora accusamus.</p>
 
-                <p1><a href="#">Lire la suite</a></p1>
+               <a  target="_blank" href="#">Lire la suite</a>
             </article>
 
-            <article class="LeVigneron">
+            <article id="levigneron" >
                 <header>
-                    <h2>Le Vigneron<img class="verre" src="/Site-Vignoble/images/icon-2.png"></h2>
+                    <img class="droite" src="images/icon-2.png">
+                    <h2>Le Vigneron</h2>
+                    
                 </header>
+                
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                      Tenetur iste fuga dignissimos sed nihil consequuntur doloremque.
                       Fugiat sint quibusdam, neque aliquam temporibus commodi sed provident,
                        ducimus saepe ipsam soluta! Commodi.</p>
 
-                       <p1><a href="#">Lire la suite</a></p1>
+                      <a  target="_blank" href="#">Lire la suite</a>
             </article>
 
-            <article class="LesProduits">
+            <article id="LesProduits" >
                 <header>
-                    <h3>Les Produits<img class=champagne src="/Site-Vignoble/images/icon-3.png"></h3>
+                    <img class="droite" src="images/icon-3.png">
+                    <h2>Les Produits</h2>
+                    
                 </header>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Voluptates deserunt, officia asperiores incidunt 
@@ -121,11 +130,11 @@
                     quibusdam excepturi quam corporis consectetur fugiat.
                      Cum odio reprehenderit itaque quaerat.</p>
 
-                     <p1><a href="#">Lire la suite</a></p1>
+                     <a  target="_blank" href="#">Lire la suite</a>
             </article>
         </section>
      
-            <hr class="alignement">
+            <hr class="clear">
         
             <section class="container-wine">
                 <div class="selection">
@@ -133,7 +142,7 @@
             
                 <h4>Notre Sélection</h4>
                 
-                    <ul>
+                    <ul class="flex-selection">
                         <li><a href="#">Gigondas</a></li>
                         <li><a href="#">Vacqueyras</a></li>
                         <li><a href="#">Rasteau</a></li>
@@ -143,15 +152,15 @@
                        
                     </ul>
                      </div>                      
-                     </section>
+                     
 
                      
             <article class="gifts">
-                 <header>
+                 <div class="gifts-title">
                     <h5>Cadeaux et accessoires</h5>
-                </header>
-            <img class="poirot" src="/Site-Vignoble/images/home-img1.jpg">
-
+                </div>
+            <img  src="images/home-img1.jpg" alt="vin">
+                <section class="text">
                 <h6>nescique quisququi dolertalorem</h6>
 
                
@@ -162,8 +171,13 @@
                    tosertyas foloresi ratione emequi nescique 
                    porro quisqum untur miaserta dertasera
                    sderadefase.</p>
-</article>
-            </main>  
+                 </section>
+            <div id="test">
+                <a  target="_blank" href="#">Lire la suite</a>
+            </div>
+        </article>
+    </section>
+</main>  
 
             <footer class="container">
                 <nav>
@@ -175,7 +189,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <div class="footer-picture">
-                        
+                        <img src="images/img_footer.png" alt="raisin ou groseille rouge">
 
                     </div>
                 </nav>
