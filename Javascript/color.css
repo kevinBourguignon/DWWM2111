@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 15px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    width: 45%;
+    font-weight: bold;
+    background-color: aquamarine;
+    border: 15px solid white;
+    border-radius: 20px;
+}
+
+
+ div {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 5px;
+    width: 30%;
+ }
