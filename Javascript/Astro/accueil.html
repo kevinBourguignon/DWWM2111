@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evaluation fonctions javascript DWWM</title>
+  <link href="mise_en_page.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+    function getCookie(_key){
+        let trouve = "cookie non trouvé";
+        let tabCookies = document.cookie.split("; ");
+        for (let i = 0; i < tabCookies.length; i++) {
+            let tabPair = tabCookies[i].split("=");
+            if (tabPair[0] == _key) {
+                trouve = tabPair[1];
+            }
+        }
+        return trouve;
+    } 
+    
+    
+
+    function nbJoursAnniv() {
+        let tabDate = (getCookie("dateAnniv")).split("/")
+        let dateDuJour = new Date();
+        let anniv = new Date(dateDuJour.getFullYear(),tabDate[1] - 1 , tabDate[0]);
+        let restant = anniv - dateDuJour ;
+        let days = Math.ceil(restant / (1000 * 60 * 60 * 24));
+        if(dateDuJour > anniv)
+        {     
+            let anniv2 = new Date(dateDuJour.getFullYear() + 1 ,tabDate[1] - 1, tabDate[0]);
+            let restant2 = anniv2 - dateDuJour;
+            let days2 = Math.ceil(restant2 / (1000 * 60 * 60 * 24));
+            let jourAvantAnniv = days2;
+            cookie("jourRestant",jourAvantAnniv);
+        }
+        else
+        {
+            let jourAvantAnniv = days;
+            cookie("jourRestant",jourAvantAnniv);
+        }
+
+        
+    }
+    nbJoursAnniv();
+  
+    let pseudo = getCookie("pseudo");
+    let nom = getCookie("nom");
+    let prenom = getCookie("prenom");
+    let anniversaire = getCookie("dateAnniv");
+    let jourAvantAnniv = getCookie("jourRestant");
+    
+   
+   
+    
+
+    function ecrireAccueil(){
+        let tabDonnee = [pseudo,nom,prenom,anniversaire,jourAvantAnniv];
+        document.write(tabDonnee);
+    }
+    ecrireAccueil();
+
+    function cookie(_moncookie, _contenucookie){
+    let dateJour = new Date();
+    let dateExpire= new Date(dateJour.getFullYear(), dateJour.getMonth(), dateJour.getDate()+1);
+    let laDateExpire= dateExpire.toUTCString();
+
+    document.cookie = _moncookie + "=" + _contenucookie + "; expires = " + laDateExpire + "; SameSite = lax";
+}
+
+
+</script>
+<body>
+
+  <div id="global">
+    <div id="header"><br />
+      <h1 id="profil">Compte perso DWWM</h1>
+    </div>
+
+    <div id="container">
+      <br />
+
+      <table class="contenu">
+
+        <tr>
+          <td width="50%">Nom utilisateur</td>
+          <td>
+            <div id="nom"><script>document.write(nom);</script></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="50%"><label for="">Prénom utilisateur</label></td>
+          <td>
+            <div id="prenom"><script>document.write(prenom);</script></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="50%"><label for="">Ville</label></td>
+          <td>
+            <div id="ville"><script>document.write(ville);</script></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="50%"><label for="">Date de naissance</label></td>
+          <td>
+            <div id="naissance"><script>document.write(anniversaire);</script></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="50%"><label for="">Pseudo</label></td>
+          <td>
+            <div id="pseudo"><script>document.write(pseudo);</script></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="50%"><label for="">Nombre de jour(s) anniversaire</label></td>
+          <td>
+            <div id="nbjour"><script>document.write(jourAvantAnniv);</script></div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

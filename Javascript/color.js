@@ -8,6 +8,48 @@ function getColor(){
     document.body.setAttribute("style", "background-color:"+chainecouleur);
 
 }
+
+
+function verichamps(_champs){
+    let testbool=false
+    let chaine= _champs.value.toUpperCase();
+    let regex=/^[0-9A-F]{2}$/;
+    if(chaine.match(regex)){
+        testbool=true;
+    }else{
+        _champs.value="";
+        _champs.focus();
+    }
+    return testbool;
+}
+
+document.querySelector("#rouge").addEventListener("blur", function(){
+
+  
+   if(verichamps(rouge)){
+       getColor();
+
+   }
+})
+
+document.querySelector("#vert").addEventListener("blur", function(){
+
+  
+    if(verichamps(vert)){
+        getColor();
+ 
+    }
+ })
+
+ document.querySelector("#bleu").addEventListener("blur", function(){
+
+  
+    if(verichamps(bleu)){
+        getColor();
+ 
+    }
+ })
+
 let btnrouge = document.querySelector("#btnrouge");
 
 btnrouge.addEventListener("click", function(){
@@ -37,5 +79,4 @@ btnbleu.addEventListener("click", function(){
     bleu.value = "ff";
     getColor();
 })
-
 
