@@ -7,7 +7,7 @@
     <meta name="author" content="CRM">
 
     <!--JavaScript-->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main.js" defer></script>
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -369,7 +369,7 @@
     <div class="parent">
      
       <div class="enfant">
-        <form action="" method="get" enctype="multipart/form-data">
+        <form action="index.html" method="GET" id="formContact" enctype="multipart/form-data">
           <p>pour nous contactez sans attendre, veuillez renseignez le formulaire suivant <br>
             les champs précédés du signe * sont obligatoire : </p>
         <label for="civilite" id="civilite1">Civilité:</label>
@@ -379,20 +379,28 @@
           <option value="Mlle">Mlle</option>
           <option value="Mme">Mme</option>
         </select><br>
+
         <label for="nom" id="nom1" required="true">Nom*:</label>
         <input type="text" id="nom" name="nom" size="30" maxlength="120"><br>
+
         <label for="prenom" id="prenom1">Prénom:</label>
         <input type="text" id="prenom" name="prenom" size="30" maxlength="120"><br>
+
         <label for="adresse" id="adresse1">Adresse:</label>
         <input type="text" id="adresse" name="adresse" size="30" maxlength="120"><br>
+
         <label for="telephone" id="telephone1" required="true">Téléphone*:</label>
-        <input type="tel" id="telephone" name="telephone" size="30" maxlength="120"><br>
+        <input type="tel" id="phone" name="phone" size="30" maxlength="120"><br>
+
         <label for="e-mail" id="e-mail1" required="true">E-mail*:</label>
-        <input type="email" id="e-mail" name="e-mail" size="30" maxlength="120"><br>
+        <input type="mail" id="email" name="email" size="30" maxlength="120"><br>
+
         <label for="objetMessage" id="objetMessage1">Objet de votre message:</label>
         <input type="text" id="objetMessage" name="objetMessage" size="30" maxlength="120"><br>
+
         <label for="text" id="message1">Votre message:</label>
         <textarea name="" id="" cols="50" rows="3"></textarea><br>
+
         <input type="button" id="envoi" value="Envoi">
       </div>
       </form>
