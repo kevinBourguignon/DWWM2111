@@ -1,0 +1,24 @@
+
+
+#game{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+#game tr:nth-child(even){
+    background-color: lightgrey;
+}
+td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+
+th{
+    border: 2px solid black;
+    background-color: grey;
+    padding: 15px;
+}    
