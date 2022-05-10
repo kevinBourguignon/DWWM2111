@@ -1,6 +1,95 @@
+main{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.container{
+    padding: 0;
+     width: 50%;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header "
+                          "header1 header1 header4"
+                        "main main caract "
+                        "main main caract1 "
+                        "main main caract2 "
+                        "footer footer footer ";
+    background-color: black;
+    border: 2px solid blue;
+}
+
+.test{
+    grid-area: header;
+   background-color: green; 
+   font-size: xx-large;
+}
+#titre{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    
+    
+}
+
+#bas{
+    grid-area: header1;
+    text-align: left;
+    padding-left: 40px;
+    color: white;
+    font-size: small;
+    background-color: green;
+}
+
+#haut{
+    grid-area: header1;
+    text-align: center;
+    padding-left: 100px;
+    color: white;
+    font-size: small;
+   
+}
+
+#droit{
+    grid-area: header4;
+    color: white;
+    font-size: small;
+    background-color: green;
+}
+
+#gauche{
+    grid-area: caract;
+    color: white;
+}
+
+#gauche1{
+    grid-area: caract1;
+    color: white;
+}
+
+#gauche2{
+    grid-area: caract2;
+    color: white;
+}
+
+#image{
+    grid-area: main;
+    width: 160px;
+    height: 160px;
+    background-color: grey;
+}
 
 
-#game{
+
+
+
+
+/* #game{
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -10,15 +99,15 @@
 #game tr:nth-child(even){
     background-color: lightgrey;
 }
+
 td{
     border: 2px solid black;
     text-align: center;
 }
 
-
-
 th{
     border: 2px solid black;
     background-color: grey;
     padding: 15px;
-}    
+}    */
+
