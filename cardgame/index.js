@@ -30,7 +30,9 @@ function fillTable(_data){
         
     }
 
+    
 }
+
 
 function rechercherMaxAttak(_data){
 
