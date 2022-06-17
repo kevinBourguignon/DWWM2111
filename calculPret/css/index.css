@@ -1,0 +1,60 @@
+body{
+    background-color: skyblue; 
+}
+   
+
+#calculPret{
+    background-color: grey;
+    color: white;
+    border: 3px solid black;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15%;
+    text-align: center;
+    
+}
+
+#capitalEmprunte{
+    text-shadow: 1px 1px 1px black;
+    padding-right: 85px;
+
+}
+
+#emprunt{
+    margin: 15px;
+}
+
+#tauxInteret{
+    text-shadow: 1px 1px 1px black;
+    padding-right: 85px;
+    
+}
+
+#interet{
+    margin: 15px;
+}
+
+#dureeRemboursement{
+    text-shadow: 1px 1px 1px black;
+    padding-right: 85px;
+
+}
+
+#remboursement{
+    margin: 15px;
+    margin-right: 140px;
+}
+
+#mensualite1{
+    text-shadow: 1px 1px 1px black;
+    padding-right: 50px;
+}
+
+#mensualite{
+    margin: 15px;
+}
+
+#validation{
+    margin-right: 85px;
+}
+

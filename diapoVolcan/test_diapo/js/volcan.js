@@ -5,11 +5,14 @@ function CreerImage(monObjet, maDiv)
     monImg.setAttribute("src", "../photos_volcans/" +monObjet.id + ".jpg" );
     monImg.setAttribute("alt", monObjet.titre);
     maDiv.appendChild(monImg);
+    
+   
 }
 
 function creerTitre(monObjet, maDiv1){
     let montitre = document.createElement("h5");
     montitre.innerText = monObjet.titre;
+    
     maDiv1.appendChild(montitre);
 }
 
@@ -18,10 +21,12 @@ for(let i = 0; i < _data.length; i++){
     let monObjet =_data[i];
 
     if(i == 0){
+        
     let maDiv = document.createElement("div");
     maDiv.setAttribute("class", "carousel-item active"); 
-    document.querySelector(".carousel-inner").appendChild(maDiv);
-    
+    document.querySelector("#photos").appendChild(maDiv);
+
+     
     CreerImage(monObjet, maDiv);
     
 
@@ -34,13 +39,15 @@ for(let i = 0; i < _data.length; i++){
     let maPhrase = document.createElement("p");
     maPhrase.innerText = monObjet.alt;
     maDiv1.appendChild(maPhrase);
+
+    
     
         }
         else
         {
             let maDiv = document.createElement("div");
             maDiv.setAttribute("class", "carousel-item");
-            document.querySelector(".carousel-inner").appendChild(maDiv);
+            document.querySelector("#photos").appendChild(maDiv);
     
             CreerImage(monObjet, maDiv);
            
@@ -54,12 +61,16 @@ for(let i = 0; i < _data.length; i++){
             let maPhrase = document.createElement("p");
             maPhrase.innerText = monObjet.alt;
             maDiv1.appendChild(maPhrase);
+
+            
         }
 
     }
 
-
+        
 }
+
+
 
 function chargerDiapo() {
             let min =document.getElementById("min").value;
@@ -81,13 +92,12 @@ function chargerDiapo() {
                 }
             };
         }
- document.getElementById("validation").addEventListener("click",chargerDiapo);
-    
+     
+document.getElementById("validation").addEventListener("click", function(){
+    let mesDiv = document.querySelector("#photos");
+    mesDiv.innerHTML = [];
+    chargerDiapo();
+});
 
 
 
-
-// fetch("volcan.json")
-// .then(response => response.json())
-// .then(response =>gerePhoto(response))
-// .catch(error => alert("Erreur ; " + error));
