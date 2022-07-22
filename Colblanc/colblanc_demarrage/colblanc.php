@@ -131,17 +131,17 @@
             <label for="grdEnt">GRANDE ENTREPRISE</label>
             <br>
 
-            <input type="checkbox" name="monchoix[]" value="TER" id="ter"<?php
+            <input type="checkbox" name="monchoix[]" value="CT" id="ter"<?php
 
-              if(isset($_POST["monchoix"]) AND in_array ("TER" , $_POST["monchoix"])) {echo "checked = 'checked'";}
+              if(isset($_POST["monchoix"]) AND in_array ("CT" , $_POST["monchoix"])) {echo "checked = 'checked'";}
 
               ?>>
             <label for="ter">COLLECTIVITE TER</label>
             <br>
 
-            <input type="checkbox" name="monchoix[]" value="ASSO" id="asso"<?php
+            <input type="checkbox" name="monchoix[]" value="ASSOC" id="asso"<?php
 
-               if(isset($_POST["monchoix"]) AND in_array ("ASSO" , $_POST["monchoix"])) {echo "checked = 'checked'";}
+               if(isset($_POST["monchoix"]) AND in_array ("ASSOC" , $_POST["monchoix"])) {echo "checked = 'checked'";}
 
               ?>>
             <label for="asso">ASSOCIATION</label>
@@ -163,11 +163,24 @@
 
 if(isset($_POST["valider"]) && !empty($_POST["dept"])){
 
-    $sql= "SELECT nom_etab, type_etab, adresse, cp, ville, Telephone FROM institutions WHERE depart = :departement ";
+    $finrq = "";
+    $param = [$_POST["dept"]];
+    
+    if(isset($_POST["monchoix"]) && count($_POST["monchoix"])> 0){
+      $finrq = " AND type_etab IN (";
+        for ($i=0; $i < count($_POST["monchoix"]) ; $i++) { 
+          $finrq .= "?,";
+          array_push($param, $_POST["monchoix"][$i]);
+        }
+       $finrq = substr($finrq, 0, -1);
+       $finrq .=")"; 
+    }
+    $sql= "SELECT nom_etab, type_etab, adresse, cp, ville, Telephone FROM institutions WHERE depart = ? ". $finrq;
     $maconnexion = maConnection::getInstance();
     $stmt = $maconnexion->prepare($sql);
-    $stmt->bindParam("departement", $_POST["dept"], PDO::PARAM_INT);
-    $stmt->execute();
+    //$stmt->bindParam("departement", $_POST["dept"], PDO::PARAM_INT);
+    
+    $stmt->execute($param);
     // var_dump($stmt->fetchAll());
  }
 
