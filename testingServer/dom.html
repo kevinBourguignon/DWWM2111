@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 class="mainTitle">Titre</h1>
+        <div>
+            <p class="parag">Premier paragraphe</p>
+            <p class="parag">Deuxième paragraphe</p>
+        </div>
+        <span id="contenuScript"></span>
+    <script>
+        let spC = document.getElementById('contenuScript');
+        let divC = document.createElement('div');
+        let b = document.body;
+        let bType = document.body.nodeType;
+        let h = document.body.firstElementChild;
+        let hType = document.body.firstElementChild.nodeType;
+        let myDiv = b.childNodes[3];
+        let mesP = document.getElementsByTagName('p');
+        let p1 = myDiv.firstElementChild;
+        let p2 = myDiv.lastElementChild;
+        let textP1 = p1.childNodes[0].nodeValue;
+        let textP2 = p2.childNodes[0].nodeValue;
+        let btn_Display = document.createElement('button');
+
+        let mySpan = document.getElementById('contenuScript');
+
+        divC.setAttribute('id', 'contenuScriptDiv')
+        divC.style.display = 'grid';
+        divC.style.alignItems = 'center';
+        divC.style.justifyContent = 'space-evenly';
+        divC.style.marginBottom = '1.2rem';
+        divC.style.display = 'none';
+        divC.style.width = 'width: calc(100vw - 10px);';
+        divC.style.color = 'floralwhite';
+        divC.style.padding = '1.5rem';
+        divC.style.backgroundColor = 'rgba(0,0,0,0.7)';
+
+        //mySpan.style.display = 'none';
+
+        btn_Display.setAttribute('id', 'btnDisplay');
+        btn_Display.setAttribute('type', 'submit');
+        // btn_Display.setAttribute('value', 'Afficher retour script');
+        //btn_Display.textContent = `Afficher les n${htmlentities.decode('&#339;')}uds`;
+        btn_Display.innerHTML = 'Afficher les n&#339;uds';//&oelig; fonctionne également
+
+        document.body.appendChild(divC);
+        document.body.appendChild(btn_Display);
+
+        btn_Display.addEventListener('click', function(event) {
+
+            event.preventDefault();
+
+            if (divC.style.display === 'none') {
+                divC.style.display = 'grid';
+                btn_Display.innerHTML = 'Fade';
+                console.log(btn_Display.innerHTML);
+            } else {
+                divC.style.display = 'none';
+                btn_Display.innerHTML = 'Afficher les n&#339;uds';
+                console.log(btn_Display.innerHTML);
+            }
+        });
+
+        divC.innerHTML = (`${b} est le parent conteneur&nbsp;<strong><em>${b.nodeName}</em></strong> de ${b.childElementCount}&nbsp;élément${b.childElementCount >= 2 ? "s :" : " :"} la collection HTML complète est la suivante : ${b.children}<br /><br /> ` + 
+        `${h} - ${h.nodeName}<br />${myDiv} - ${myDiv.nodeName}<br />${p1} - ${p1.nodeName}<br /><br />` +
+        `${h} est le ${hType}${hType < 2 ? "<sup>er</sup> " : " "}élément du noeud.<br />` +
+        `${myDiv} : contenant ${myDiv.childElementCount} élément${myDiv.childElementCount > 1 ? 's' : ''} :<br /><br />` +
+        `${p1} : contenant ${mesP.length}&nbsp;élément${mesP.length > 1 ? 's : ' : ' : '} ${p1} et ${p2}<br /><br />` + 
+        `contenu de ${p1} : ${textP1}.<br />contenu de ${p2} : ${textP2}`);
+
+
+
+
+
+
+        (function(window){
+	    window.htmlentities = {
+		/**
+		 * Converts a string to its html characters completely.
+		 *
+		 * @param {String} str String with unescaped HTML characters
+		 **/
+		encode : function(str) {
+			var buf = [];
+			
+			for (var i=str.length-1;i>=0;i--) {
+				buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+			}
+			
+			return buf.join('');
+		},
+		/**
+		 * Converts an html characterSet into its original character.
+		 *
+		 * @param {String} str htmlSet entities
+		 **/
+		decode : function(str) {
+			return str.replace(/&#(\d+);/g, function(match, dec) {
+				return String.fromCharCode(dec);
+			});
+		}
+	    };
+        })(window);
+    </script>
+</body>
+</html>

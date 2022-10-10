@@ -1,3 +1,6 @@
+<?php
+// use \Tutoriel\contribuable;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,7 +33,7 @@ value='<?php (!empty($_POST["revenu"])) ? print($_POST["revenu"]) : print("") ; 
 // $tab = array("Jusqu'à 10 225€"=>"0%", "de 10 226€ à 26 070€"=>"0.11", "de 26 071€ à 74 545€"=>"0.30", "de 74 546€ à 160 336€"=>"0.41", "Supérieur à 160 336€"=>"0.45");
 if(!empty($_POST["lastname"]) && !empty($_POST["revenu"]) ){
 
-    $monContribuable = new Contribuable($_POST["lastname"], $_POST["revenu"] );
+    $monContribuable = new \Tutoriel\Contribuable($_POST["lastname"], $_POST["revenu"] );
 
     $impot = $monContribuable->calculImpot();
 

@@ -12,6 +12,8 @@ $pdoStat = $objetPDO->prepare('UPDATE restaurant set Nom=:nom, Adresse=:adresse,
 Note=:note, Visite=:visite WHERE id=:num');
 
 
+
+
 //liaison du paramètre nommé
 
 $pdoStat->bindParam(':num', $_POST['numContact'], PDO::PARAM_INT);

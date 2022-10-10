@@ -1,0 +1,19 @@
+{
+    "name": "bourguignon/mv-cexos",
+    "description": "Un projet de MVC",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bourguignon",
+            "email": "Bourguignon@crm.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Blog\\" : "Blog"
+        }
+    }
+}
