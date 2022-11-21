@@ -6,7 +6,7 @@
     const host = 'localhost';
     const user = 'root';
     const pass = '';
-    const base = 'immobilier';
+    const base = 'examen_blanc';
 
     private function __construct() {}
 
